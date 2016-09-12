@@ -1,6 +1,20 @@
 <div class="container chat" v-cloak>
   <div class="row">
-    <div class="col-md-6 col-md-offset-3">
+    <div class="col-md-4">
+      <h2 class="text-center">User Connecteds</h2>
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <ul class="list-unstyled">
+            {{presencesList|json}}
+            <li v-for="presence in presences" v-bind:style="{'font-weight': 'bold'}">
+              <span class="connected"></span>
+              {{presence.name}}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
       <h2 class="text-center">Chat</h2>
       <div class="panel panel-default">
         <div class="panel-body">

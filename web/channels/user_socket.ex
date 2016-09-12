@@ -22,13 +22,20 @@ defmodule PhoenixChat.UserSocket do
   #
   # See `Phoenix.Token` documentation for examples in
   # performing token verification on connect.
-  def connect(_params, socket) do
-    {:ok, socket}
+
+  # def connect(_params, socket) do
+  def connect(params, socket) do
+    {:ok, assign(socket, :user_id, params["user_id"])}
+    # {:ok, socket}
   end
+
+  # def id(socket), do: "users_socket:#{socket.assigns.user_id}"
+  def id(socket), do: "user_id:#{socket.assigns.user_id}"
+
 
   # Socket id's are topics that allow you to identify all sockets for a given user:
   #
-  #     def id(socket), do: "users_socket:#{socket.assigns.user_id}"
+  # def id(socket), do: "users_socket:#{socket.assigns.user_id}"
   #
   # Would allow you to broadcast a "disconnect" event and terminate
   # all active sockets and channels for a given user:
@@ -36,5 +43,5 @@ defmodule PhoenixChat.UserSocket do
   #     PhoenixChat.Endpoint.broadcast("users_socket:#{user.id}", "disconnect", %{})
   #
   # Returning `nil` makes this socket anonymous.
-  def id(_socket), do: nil
+  # def id(_socket), do: nil
 end
