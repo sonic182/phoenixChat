@@ -56,10 +56,7 @@ exports.config = {
       ignore: [/web\/static\/vendor/]
     },
     sass: {
-      mode: 'native',
-      options:{
-        includePaths: ['node_modules/bootstrap-sass/assets']
-      }
+      mode: 'native'
     }
   },
 
