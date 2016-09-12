@@ -1,0 +1,19 @@
+<div class="container chat v-cloak">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h2 class="text-center">Chat</h2>
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <ul class="messages list-unstyled">
+            <li v-for="message in messages" class="message">
+              <p class="autor" v-bind:style="{color: message.color}">{{message.user}}</p>
+              {{{message.message}}}
+              <span  class="time pull-right">{{message.date|date '%T'}}</span>
+            </li>
+          </ul>
+          <input type="text" v-on:keyup.enter="sendMessage(new_msg)" v-model="new_msg" name="message" placeholder="type here" value="" class="form-control">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

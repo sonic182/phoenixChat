@@ -19,3 +19,13 @@ import "phoenix_html"
 // paths "./socket" or full ones "web/static/js/socket".
 
 // import socket from "./socket"
+
+import "turbolinks"
+
+Turbolinks.start()
+
+// components
+
+import Chat from "./chat/chat.js"
+// console.log(Chat)
+new Chat()

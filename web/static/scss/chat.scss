@@ -1,0 +1,22 @@
+.chat{
+
+  // background-color: purple;
+  input[name=message]{
+    margin-left: -15px;
+    margin-bottom: -15px;
+    width: calc(100% + 30px;);
+    border-left: 0px;
+    border-right: 0px;
+  }
+  .messages{
+    overflow-y: scroll;
+    height: 200px;
+    .autor{
+      font-weight: bold;
+    }
+    .message{
+      margin: 10px auto;
+      padding: 5px;
+    }
+  }
+}
