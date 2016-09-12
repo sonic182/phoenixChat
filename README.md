@@ -1,3 +1,9 @@
+# Demo app
+Now you can visit [`the demo app`](https://warm-meadow-51920.herokuapp.com) from your browser.
+
+![Alt text](/extras/screen.jpg?raw=true "Optional Title")
+
+
 # PhoenixChat
 
 To start your Phoenix app:
