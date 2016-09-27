@@ -17,6 +17,11 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 Ready to run in production? Please [check our deployment guides](http://www.phoenixframework.org/docs/deployment).
 
+# Relevant Files
+* `web/static/js/chat/chat.js` for vuejs chat logic
+* `web/channels/chat_channel.ex` for channel logic
+* `web/templates/chat/index.html.eex` for chat template
+
 ## Learn more
 
   * Official website: http://www.phoenixframework.org/
